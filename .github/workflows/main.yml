@@ -1,14 +1,12 @@
-name: Deploy website to Heroku
+name: Deploy website to Heroku (Master Branch)
 
 on:
   push:
     branches:
       - master
-      - feature
   pull_request:
     branches:
       - master
-      - feature
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -27,6 +25,6 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.5.6
         with:
           heroku_api_key: ${{secrets.HEROKU_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP}}
+          heroku_app_name: ${{secrets.HEROKU_APP_MAIN}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           procfile: "web: vendor/bin/heroku-php-apache2 ./"
