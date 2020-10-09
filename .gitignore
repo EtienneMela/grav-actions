@@ -4,7 +4,6 @@ vendor/*
 !*/vendor/*
 
 #Misc
-.htaccess
 .travis.yml
 CHANGELOG.md
 CODE_OF_CONDUCT.md
